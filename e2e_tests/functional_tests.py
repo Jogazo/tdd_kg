@@ -83,8 +83,25 @@ class BasicRegressionTests(BaseTestCase):
         self.browser.get('http://localhost:8000')
         self.take_screenshot('homepage')
         self.check_html_title('_kg')
+        self.check_header_block()
+        self.check_content_block()
+        self.check_footer_block()
 
     def check_html_title(self, title):
         self.logger.info('expected html title: {}'.format(title))
         assert title == self.browser.title, \
             'check title\nexpected: {}\nobserved: {}'.format(title, self.browser.title)
+
+    def check_header_block(self):
+        # TODO: 'validate that the header block is present.'
+        # TODO: 'validate that the header block has the top image, and 4 buttons.'
+        pass
+
+    def check_content_block(self):
+        # TODO: 'validate that the page-specific content block is present.'
+        pass
+
+    def check_footer_block(self):
+        # TODO: 'validate that the footer block is present.'
+        # TODO: 'Nice-to-have: validate that the social media sharing buttons work'
+        pass

@@ -1,0 +1,6 @@
+## If you include a new library: provide a brief description what it does and why it is included or where
+## it is used for
+#######################################################################################################################
+
+#Django
+django==1.11.3

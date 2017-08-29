@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="_kg">
+<meta name="keywords" content="_kg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style  base="" type="text/css">
+body{
+font-family: Ubuntu, sans-serif;
+color:#FFFFFF;
+background-color:#000000;
+margin:10px;
+}
+
+h1 {font-size:150%;}
+h2 {font-size:120%;}
+h3 {font-size:110%;}
+th {color:#FFFFFF;background-color:#004000;}
+
+a:link {color:#FFFFFF;}
+a:hover {color:#004000;}
+a:visited { color: #008000; text-decoration: none;}
+
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+</style>
+
+<title>_kg</title>
+</head>
+<body>
+<p>header</p>
+<hr>
+<p>content</p>
+<table id="media_table">
+{% for item in media_appearances %}
+    <tr>
+        <td>{{ item.dag }}</td>
+        {% if item.tijd %}
+            <td>{{ item.tijd }}</td>
+        {% else %}
+            <td></td>
+        {% endif %}
+        <td>{{ item.omschrijving }}</td>
+    </tr>
+{% endfor %}
+</table>
+
+<hr>
+<p>footer</p>
+<hr>
+</body>
+</html>
